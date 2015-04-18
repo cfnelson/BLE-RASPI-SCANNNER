@@ -1,4 +1,4 @@
-# mustached-octo-bugfixes
+# BLE RASPI SCANNNER
 This project is Open-Source under the GPL-2.0 Licence.
 
 The project has been written in both C and Python. 
@@ -22,10 +22,12 @@ You must edit the `base_url` variable to match your intended server and port.
 The webserver must be online and ready to accept a connection. 
 
 ####TO COMPILE:
-Enter the following command into your console: 
+Enter the following command into your console:
+
 ```gcc -o ble_raspi_scanner ble_raspi_scanner.c -lbluetooth```
 
 ####TO RUN:
-Once your source file has been compiled...
+Once your source file has been compiled.
 Enter the following command into your console: 
+
 ```sudo python python_ble_scanner.py```
