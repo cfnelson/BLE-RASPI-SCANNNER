@@ -2,7 +2,8 @@
 This project is Open-Source under the GPL-2.0 Licence.
 
 The project has been written in both C and Python. 
-The project was developed to test and demonstrate "one" possible approach to a light-weight program for capturing Bluetooth Low Energy (BLE) Advertising Packets. 
+The project was developed to test and demonstrate "one" possible approach to a light-weight program for capturing Bluetooth Low Energy (BLE) Advertising Packets.
+
 Specifically iBeacon Packets on a RaspberryPi (Raspi), where the captured packets would be immediately reported to a node.js webserver. 
 This particular implementation uses websockets to forward the captured packets to a socket.io/node.js webserver. 
 
@@ -30,8 +31,7 @@ Enter the following command into your console:
 ```gcc -o ble_raspi_scanner ble_raspi_scanner.c -lbluetooth```
 
 ####TO RUN:
-Once your source file has been compiled.
-
+When the source file is compiled successfully,
 Enter the following command into your console: 
 
 ```sudo python python_ble_scanner.py```
