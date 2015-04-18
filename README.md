@@ -1,9 +1,8 @@
 # mustached-octo-bugfixes
-This project is Open-Source under the GPL-2.0 Licence.  
-The project has been written in both C and Python.
-
-The project was developed to test and demonstrate "one" possible approach to a light-weight program for capturing Bluetooth Low Energy (BLE) Advertising Packets.
-Specifically iBeacon Packets on a RaspberryPi (Raspi), where the captured packets would be immediately reported to a node.js webserver.
+This project is Open-Source under the GPL-2.0 Licence. 
+The project has been written in both C and Python. 
+The project was developed to test and demonstrate "one" possible approach to a light-weight program for capturing Bluetooth Low Energy (BLE) Advertising Packets. 
+Specifically iBeacon Packets on a RaspberryPi (Raspi), where the captured packets would be immediately reported to a node.js webserver. 
 This particular implementation uses websockets to forward the captured packets to a socket.io/node.js webserver. 
 
 ##Hardware & Software Used:
