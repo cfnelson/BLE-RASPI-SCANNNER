@@ -17,8 +17,11 @@ Note: Ensure that your linux distro has the latest `libbluetooth-dev` installed.
 
 ##Before Running:
 Ensure that your linux distro has all the required dependencies.
+
 Ensure that you have specified the intended server and port in the python code.
-You must edit the `base_url` variable to match your intended server and port. 
+
+You must edit the `base_url` variable to match your intended server and port.
+
 The webserver must be online and ready to accept a connection. 
 
 ####TO COMPILE:
@@ -28,6 +31,7 @@ Enter the following command into your console:
 
 ####TO RUN:
 Once your source file has been compiled.
+
 Enter the following command into your console: 
 
 ```sudo python python_ble_scanner.py```
