@@ -32,7 +32,6 @@ Enter the following command into your console:
 ```gcc -o ble_raspi_scanner ble_raspi_scanner.c -lbluetooth```
 
 ####TO RUN:
-When the source file is compiled successfully,
 Enter the following command into your console: 
 
 ```sudo python python_ble_scanner.py```
