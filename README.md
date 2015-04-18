@@ -14,14 +14,14 @@ The project was developed to test and demonstrate "one" possible approach to a l
 Note: Ensure that your linux distro has the latest `libbluetooth-dev` installed.
 
 ##Before Running:
-
+Ensure that your linux distro has all the required dependencies. 
 Ensure that you have specified the intended server and port in the python code.
 You must edit the `base_url` variable to match your intended server and port. 
 
-##TO COMPILE:
+####TO COMPILE:
 
 ```gcc -o ble_raspi_scanner ble_raspi_scanner.c -lbluetooth```
 
-##TO RUN AND SEND TO THE SERVER:
+####TO RUN AND SEND TO THE SERVER:
 
 ```sudo python python_ble_scanner.py```
