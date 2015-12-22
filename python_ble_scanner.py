@@ -6,7 +6,7 @@
 #		https://gist.github.com/carljm/3d4873e763b279e26de4 
 #		https://github.com/invisibleroads/socketIO-client/issues/52
 #
-#	Many thanks to carl
+#	Many thanks to carl.
 #	***************************************************************************
 #   
 #	This program is free software: you can redistribute it and/or modify
@@ -27,13 +27,14 @@ import platform
 import subprocess
 import re
 import sys
+
 #socket.io imports below     
 import json
- 
 import requests
 from websocket import create_connection
 
-base_url = 'speedy-fireball-85-177924.apse2.nitrousbox.com:3000' #add the server's IP address and Port Number HERE
+# Replace the target server's IP Address and Port Number below.
+base_url = 'IP_ADDRESS:PORT' 
 url = base_url + '/socket.io/'
 
 BASE = url + '?EIO=3'
@@ -44,12 +45,12 @@ resp = requests.get(url)
 print resp.status_code, resp.headers, resp.content
  
 # Ignore the bin-packed preliminaries in the SocketIO response and just parse
-# the JSON; it tells us everything we really need to know
+# the JSON; it tells us everything we really need to know.
 json_data = json.loads(resp.content[resp.content.find('{'):])
 sid = json_data['sid']
 assert sid == resp.cookies['io']
  
-# Now we have a session ID, establish a websocket connection
+# Now we have a session ID, establish a websocket connection.
 ws_url = 'ws://%s&transport=websocket&sid=%s' % (BASE, sid)
 conn = create_connection(ws_url)
  
@@ -63,7 +64,7 @@ conn.send('5')
 # Send a socket.io event!
 # 4 = MESSAGE
 # 2 = EVENT
-# "location" is event name, "%s"/heypacket_json is payload
+# "location" is event name, "%s"/heypacket_json is payload.
 popen = subprocess.Popen(["/home/pi/ble_raspi_scanner"], stdout=subprocess.PIPE)
 for inputLine in iter(popen.stdout.readline, ""):
 	packetString = inputLine
@@ -71,4 +72,4 @@ for inputLine in iter(popen.stdout.readline, ""):
 	packet = '42["location",%s]' % json.dumps(heypacket_json)
 	conn.send(packet)
  
-#from IPython import embed; embed()
+# from IPython import embed; embed()
